@@ -28,7 +28,6 @@ Project 1: Network Redundancy
   * VRRP (Virtual Router Redundancy Protocol) will be used to make that happen
   * Port Forwarding will also help meet the redundancy requirements, setting up 2FA for SSH on the web server
 
-\
 
 
 Lab commands:
@@ -39,7 +38,7 @@ set interfaces ethernet eth0 description 'WAN'
 
 
 
-set up my vms^
+Setting up my vms
 
 ```
 set nat source rule 10 description 'NAT FROM LAN to WAN'
