@@ -25,6 +25,10 @@ Deliverable 1. DO THIS FIRST! Write up a project plan/ordered list of what needs
 
 
 
+set up dns forwarding for OPT, ha1 is almost set up, cannot ping google.com.
+
+
+
 Setting up web02
 
 Creating user + giving sudo perms
