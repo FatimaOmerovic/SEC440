@@ -127,14 +127,10 @@ set high-availability vrrp group WAN priority '200'
 set high-availability vrrp group WAN vrid '156'
 set interfaces ethernet eth0 address '10.0.17.16/24'
 set interfaces ethernet eth0 description 'SEC440-WAN'
-set interfaces ethernet eth0 hw-id '00:50:56:a1:7d:9e'
 set interfaces ethernet eth1 address '10.0.5.2/24'
 set interfaces ethernet eth1 description 'SEC440-LAN'
-set interfaces ethernet eth1 hw-id '00:50:56:a1:50:28'
 set interfaces ethernet eth2 address '10.0.6.2/24'
 set interfaces ethernet eth2 description 'SEC440-OPT'
-set interfaces ethernet eth2 hw-id '00:50:56:a1:f3:af'
-set interfaces loopback lo
 set nat destination rule 10 description 'HTTP -> WEB01'
 set nat destination rule 10 destination port '80'
 set nat destination rule 10 inbound-interface 'eth0'
@@ -159,24 +155,9 @@ set service dns forwarding allow-from '10.0.5.0/24'
 set service dns forwarding listen-address '10.0.5.1'
 set service dns forwarding system
 set service ssh listen-address '0.0.0.0'
-set system config-management commit-revisions '100'
-set system conntrack modules ftp
-set system conntrack modules h323
-set system conntrack modules nfs
-set system conntrack modules pptp
-set system conntrack modules sip
-set system conntrack modules sqlnet
-set system conntrack modules tftp
-set system console device ttyS0 speed '115200'
 set system host-name 'vyos01-fatima'
-set system login user vyos authentication encrypted-password '$6$YUTCBnIl7XuxPfv7$UQXsMiDLSJsDs9mPJ2PQ.9IjjMks5MrKu6IlQRJsS.VIvkYeQXFvupJVrZMTQFYjkbTkRshVAYECJS337kHAS/'
-set system login user vyos authentication plaintext-password ''
 set system name-server '10.0.17.2'
-set system ntp server time1.vyos.net
-set system ntp server time2.vyos.net
-set system ntp server time3.vyos.net
-set system syslog global facility all level 'info'
-set system syslog global facility protocols level 'debug'
+
 
 ```
 
@@ -197,14 +178,10 @@ set high-availability vrrp group WAN priority '100'
 set high-availability vrrp group WAN vrid '156'
 set interfaces ethernet eth0 address '10.0.17.76/24'
 set interfaces ethernet eth0 description 'SEC440-WAN'
-set interfaces ethernet eth0 hw-id '00:50:56:a1:8a:01'
 set interfaces ethernet eth1 address '10.0.5.3/24'
 set interfaces ethernet eth1 description 'SEC440-LAN'
-set interfaces ethernet eth1 hw-id '00:50:56:a1:2c:00'
 set interfaces ethernet eth2 address '10.0.6.3/24'
 set interfaces ethernet eth2 description 'SEC440-OPT'
-set interfaces ethernet eth2 hw-id '00:50:56:a1:93:78'
-set interfaces loopback lo
 set nat destination rule 10 description 'HTTP -> WEB01'
 set nat destination rule 10 destination port '80'
 set nat destination rule 10 inbound-interface 'eth0'
@@ -230,24 +207,9 @@ set service dns forwarding allow-from '10.0.5.0/24'
 set service dns forwarding listen-address '10.0.5.1'
 set service dns forwarding system
 set service ssh listen-address '0.0.0.0'
-set system config-management commit-revisions '100'
-set system conntrack modules ftp
-set system conntrack modules h323
-set system conntrack modules nfs
-set system conntrack modules pptp
-set system conntrack modules sip
-set system conntrack modules sqlnet
-set system conntrack modules tftp
-set system console device ttyS0 speed '115200'
 set system host-name 'vyos02-fatima'
-set system login user vyos authentication encrypted-password '$6$YUTCBnIl7XuxPfv7$UQXsMiDLSJsDs9mPJ2PQ.9IjjMks5MrKu6IlQRJsS.VIvkYeQXFvupJVrZMTQFYjkbTkRshVAYECJS337kHAS/'
-set system login user vyos authentication plaintext-password ''
 set system name-server '10.0.17.2'
-set system ntp server time1.vyos.net
-set system ntp server time2.vyos.net
-set system ntp server time3.vyos.net
-set system syslog global facility all level 'info'
-set system syslog global facility protocols level 'debug'
+
 
 
 ```
