@@ -45,7 +45,7 @@ set nat source rule 10 translation address masquerade
 
 web01
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 setting up VRRP
 

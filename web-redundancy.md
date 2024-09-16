@@ -21,25 +21,51 @@ Keepalived
 
 HaProxy Lab:
 
-Deliverable 1. DO THIS FIRST! Write up a project plan/ordered list of what needs to be configured and in what order. Having this will really help you as you move through the project.
+Setting up Web02
 
+<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
+```
+sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
+sudo firewall-cmd --permanent --zone=public --add-port=22/tcp
 
-set up dns forwarding for OPT, ha1 is almost set up, cannot ping google.com.
+Install httpd and enable
+```
 
-
-
-Setting up web02
-
-Creating user + giving sudo perms
-
-
+&#x20;
 
 Setting up Ha1 + Ha2
 
-Creating user + giving sudo perms
+Installing HaProxy and Keepalived: [https://sysadmins.co.za/achieving-high-availability-with-haproxy-and-keepalived-building-a-redundant-load-balancer/](https://sysadmins.co.za/achieving-high-availability-with-haproxy-and-keepalived-building-a-redundant-load-balancer/)
 
 
+
+HA1 (MASTER)
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+\--
+
+in the /etc/haproxy/haproxy.cfg add this:
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+in the /etc/keepalived/keepalived.conf
+
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+HA2 (BACKUP)
+
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+```
+sudo systemctl start haproxy
+sudo systemctl start keepalived
+```
 
 vyos1
 
