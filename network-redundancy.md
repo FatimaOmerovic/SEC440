@@ -7,11 +7,11 @@ description: 8/27/2024
 ### Risk Analysis
 
 * Redundancy is expensive
-* Disaster Recovery Site Options&#x20;
-  * Types of Failover like sites (Hot \$$$, Warm \$$, Cold $)&#x20;
+* Disaster Recovery Site Options
+  * Types of Failover like sites (Hot \$$$, Warm \$$, Cold $)
     * Cold is cyber.local going down
     * Warm is a redundant cyber.local
-    * Hot is a critical system that will impact people, jobs, and money.&#x20;
+    * Hot is a critical system that will impact people, jobs, and money.
 * Disaster Recovery Means
   * Data - Replication, Offsite Backup -- NOT Cloud environment
   * Networks - High availability options, double
@@ -28,17 +28,11 @@ Project 1: Network Redundancy
   * VRRP (Virtual Router Redundancy Protocol) will be used to make that happen
   * Port Forwarding will also help meet the redundancy requirements, setting up 2FA for SSH on the web server
 
-
-
 Lab commands:
 
-set interfaces ethernet eth0 address '10.0.17.16/24'
-
-set interfaces ethernet eth0 description 'WAN'
 
 
-
-Setting up my vms
+vyos 1+2
 
 ```
 set nat source rule 10 description 'NAT FROM LAN to WAN'
@@ -47,15 +41,11 @@ set nat source rule 10 source address 10.0.5.0/24
 set nat source rule 10 translation address masquerade
 ```
 
-vyos01 to get xubuntu-lan to work
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 web01
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>gateway is 10.0.5.1** due to virtual</p></figcaption></figure>
-
-
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 setting up VRRP
 
@@ -73,8 +63,6 @@ set high-availability vrrp group OPT vrid 30
 set high-availability vrrp group OPT interface eth2
 set high-availability vrrp group OPT address 10.0.6.1/24
 </code></pre>
-
-
 
 nat destination vyos01 + 2
 
@@ -213,8 +201,6 @@ set system name-server '10.0.17.2'
 
 
 ```
-
-
 
 Review:
 
