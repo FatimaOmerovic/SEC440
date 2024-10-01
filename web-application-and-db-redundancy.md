@@ -12,7 +12,7 @@ sudo usermod -aG sudo fatima
 
 swsss
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>/etc/netplan/00-installer-config.yaml for u1</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption><p>/etc/netplan/00-installer-config.yaml for u1</p></figcaption></figure>
 
 ```
 sudo netplan apply
@@ -23,13 +23,9 @@ sudo apt update
 sudo apt install mariadb-server
 ```
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>/etc/mysql/mariadb.conf.d/60-galera.cnf, the node name and address will be different for each box</p></figcaption></figure>
-
 Go into 50-server.cnf file and make the bind-address 0.0.0.0 for each VM.&#x20;
 
-INSERTPHOTO!!
-
-
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>/etc/mysql/mariadb.conf.d/60-galera.cnf</p></figcaption></figure>
 
 U1:
 
@@ -59,11 +55,7 @@ Sudo galera_new_cluster
 
 HA 1+2
 
-input picture of haproxy config&#x20;
-
-ddd
-
-dd
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>/etc/haproxy/haproxy.cfg</p></figcaption></figure>
 
 Setting up PHP on webservers (web01 + web02)
 
@@ -75,9 +67,7 @@ systemctl restart httpd
 
 Create php file
 
-INSERT PHOTO OF PHP FILE THATS EMPTY BASICALLY (/var/www/html/info.php)
-
-ff
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption><p>/var/www/html</p></figcaption></figure>
 
 ```
 sudo systemctl restart httpd
@@ -85,7 +75,7 @@ sudo systemctl restart httpd
 
 Navigate to the web01 address /info.php
 
-INPUT PHOTO
+<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 
 
