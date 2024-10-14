@@ -25,7 +25,7 @@ sudo apt install mariadb-server
 
 Go into 50-server.cnf file and make the bind-address 0.0.0.0 for each VM.&#x20;
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>/etc/mysql/mariadb.conf.d/60-galera.cnf</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption><p>/etc/mysql/mariadb.conf.d/60-galera.cnf</p></figcaption></figure>
 
 U1:
 
@@ -55,7 +55,7 @@ Sudo galera_new_cluster
 
 HA 1+2
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>/etc/haproxy/haproxy.cfg</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption><p>/etc/haproxy/haproxy.cfg</p></figcaption></figure>
 
 Setting up PHP on webservers (web01 + web02)
 
@@ -67,7 +67,7 @@ systemctl restart httpd
 
 Create php file
 
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption><p>/var/www/html</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption><p>/var/www/html</p></figcaption></figure>
 
 ```
 sudo systemctl restart httpd
@@ -75,7 +75,7 @@ sudo systemctl restart httpd
 
 Navigate to the web01 address /info.php
 
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
